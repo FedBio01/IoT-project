@@ -1,4 +1,4 @@
-# IoT Project 2024 text Report
+# IoT Project 2024
 
 ### [Video link](https://youtu.be/uOjWqldErBI)
 
