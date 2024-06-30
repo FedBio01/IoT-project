@@ -1,7 +1,7 @@
 # IoT Project 2024 text Report
 
 ## Video link: https://youtu.be/uOjWqldErBI
-## PDF format: Report_IoT_2024_Biondi-Casciani-Di Paola.pdf
+## PDF format: [[Report_IoT_2024_Biondi-Casciani-Di Paola.pdf]]
 
 ## Members:
 - Biondi Federico 2151856, biondi.2151856@studenti.uniroma1.it
