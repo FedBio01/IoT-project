@@ -1,9 +1,10 @@
-IoT Project 2024
-Members:
+# IoT Project 2024
+## Members:
 - Biondi Federico 2151856, biondi.2151856@studenti.uniroma1.it
 - Casciani Leonardo 2154695, casciani.2154695@studenti.uniroma1.it
 - Di Paola Riccardo 2151847, dipaola.2151847@studenti.uniroma1.it
-Project C
+## Project C
+
 Firstly, we managed the motion of the sensors by making Active Sensors spawn in the simulation_launch file, instead of Sensors. Then, in order to make them move randomly, we created a function (“publish_velocity”), which makes them move only along X-axis. In particular, it checks if sensors are moving towards positive X values or negative ones and changes their direction when they get near the border of the simulation area.
 To let them go all in the same direction, we handled their spawn orientation by adding the “rot” parameter in the “spawn_sdf” function of the “sim_utils” file and by giving “rot=(0,0,0)” in input to the spawning sensor function in the “sdf_launch” file.
 Since they move only along X-axis, we avoided to make them spawn on the same Y value (or on the base station’s Y value) by adding a list of already taken Y values in the “simulation_launch” file.
@@ -34,6 +35,7 @@ We implemented an optimal scenario, where:
 •	the range of timestamps considered by the base station to poll sensors is equivalent to about 12 timestamps
 •	the base station frequency of querying is equal to 6 seconds, with an increment of the reference instant (called just “timestamp” in the code) equivalent to 6 seconds (every 6 seconds)
 •	and the ∆t threshold increment is scheduled every 12 seconds (in the “balloon_controller” file)
+
 Clearly, in a realistic scenario cache could be very limited and it would be important to find a compromise. For instance, in the scenario described above the cache size could be reduced to 10 times the number of sensors, which would produce more cache misses but keep the percentage of satisfied requests high.
 Also, the timestamps range from which the base station randomly picks its queries could be increased or decreased (maintaining the coherence with the other parameters described above) keeping a fixed cache size, and this would have a similar effect to only reducing the cache size.
 Moreover, a hypothetical scenario could involve higher cache volatility and therefore more frequent eviction of data from the cache leading to a decrease of the performances. With our implementation, even doubling the frequency of data eviction after the threshold the performances remain high.
@@ -46,14 +48,23 @@ Another critical point is the frequency related to the sending of data by the se
 
 Some simulation examples:
 
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/9200372b-8691-4fa1-9adb-0c6518b9c4a1)
 This is our implemented scenario described at the beginning of the “performances consideration” section. Number of sensors = 6; Balloons = 3; cache size = 48.
 
-
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/ca2a0645-19bc-47d3-a57d-d40b0d9e3c06)
 Here, the cache size has been reduced to 10 times the number of sensors. Performances are just a bit lower than the ideal scenario. Number of sensors = 4; Balloons = 3; cache size = 40.
+
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/4c41a625-230b-420b-b106-2b4f38b28c20)
 Here, the cache size has been reduced to 6 times the number of sensors (half w.r.t the ideal scenario). The percentage of satisfied requests has decreased but it’s still good considering the much-limited size used. Number of sensors = 4; Balloons = 3; cache size = 24.
+
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/1e226c96-23bf-4349-b3e1-ab1f78a4a585)
 Here, the frequency eviction of data from the cache has been doubled but performances are still really high. Number of sensors = 6; Balloons = 3; cache size = 48.
+
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/00a83c80-6f1f-4df5-a436-7f2551ac1b0b)
 Here, every sensor has a different rate for sending data to the balloons, and requests are performed in accordance with these rates, in a parametric way. Performances are pretty high but decreased w.r.t the ideal scenario due to the issues caused by handling different data rates.
 Number of sensors = 6; Balloons = 3; cache size = 48.
+
+![image](https://github.com/FedBio01/IoT-project/assets/118269653/07da5b22-f392-4aa3-8fbe-cc0268fb2487)
 Here, it’s again an optimal scenario but with a higher density of devices. Performances are really high. Number of sensors = 7; Balloons = 6; cache size = 84.
 
 
