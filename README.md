@@ -46,32 +46,38 @@ Another critical point is the frequency related to the sending of data by the se
 
 
 
-Some simulation examples:
+## Some simulation examples:
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/9200372b-8691-4fa1-9adb-0c6518b9c4a1)
+
 This is our implemented scenario described at the beginning of the “performances consideration” section. Number of sensors = 6; Balloons = 3; cache size = 48.
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/ca2a0645-19bc-47d3-a57d-d40b0d9e3c06)
+
 Here, the cache size has been reduced to 10 times the number of sensors. Performances are just a bit lower than the ideal scenario. Number of sensors = 4; Balloons = 3; cache size = 40.
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/4c41a625-230b-420b-b106-2b4f38b28c20)
+
 Here, the cache size has been reduced to 6 times the number of sensors (half w.r.t the ideal scenario). The percentage of satisfied requests has decreased but it’s still good considering the much-limited size used. Number of sensors = 4; Balloons = 3; cache size = 24.
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/1e226c96-23bf-4349-b3e1-ab1f78a4a585)
+
 Here, the frequency eviction of data from the cache has been doubled but performances are still really high. Number of sensors = 6; Balloons = 3; cache size = 48.
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/00a83c80-6f1f-4df5-a436-7f2551ac1b0b)
+
 Here, every sensor has a different rate for sending data to the balloons, and requests are performed in accordance with these rates, in a parametric way. Performances are pretty high but decreased w.r.t the ideal scenario due to the issues caused by handling different data rates.
 Number of sensors = 6; Balloons = 3; cache size = 48.
 
 ![image](https://github.com/FedBio01/IoT-project/assets/118269653/07da5b22-f392-4aa3-8fbe-cc0268fb2487)
+
 Here, it’s again an optimal scenario but with a higher density of devices. Performances are really high. Number of sensors = 7; Balloons = 6; cache size = 84.
 
 
 
 
 
-Final remarks:
+## Final remarks:
 •	Some implementation details were omitted because they were left the same as the professors' initial code.
 •	As suggested by the professors we have created two separate launch files to avoid issues when starting the program. One contains the spawn of everything except the SDFs and the other just the SDFs.
 •	Other details about implementation are commented inside the code shared.
