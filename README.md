@@ -2,7 +2,7 @@
 
 ### [Video link](https://youtu.be/uOjWqldErBI)
 
-### [Text Report](https://github.com/FedBio01/IoT-project/blob/5fe79140623276ccabc3f4e870920f7ef18a8a2b/Report_IoT_2024_Biondi-Casciani-Di%20Paola.pdf)
+### [Text Report](https://github.com/FedBio01/IoT-project/blob/6e05a9f91bf7f9994e06323dbd01461feca1e17b/Report_IoT_2024_Biondi-Casciani-Di%20Paola.pdf)
 
 ### Members:
 - Biondi Federico 2151856, biondi.2151856@studenti.uniroma1.it
