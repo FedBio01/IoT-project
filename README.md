@@ -1,4 +1,8 @@
-# IoT Project 2024 text Report (better format in pdf file)
+# IoT Project 2024 text Report
+
+# Video link: https://youtu.be/uOjWqldErBI
+# PDF format:  
+
 ## Members:
 - Biondi Federico 2151856, biondi.2151856@studenti.uniroma1.it
 - Casciani Leonardo 2154695, casciani.2154695@studenti.uniroma1.it
