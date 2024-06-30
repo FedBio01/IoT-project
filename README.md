@@ -79,7 +79,10 @@ Here, it’s again an optimal scenario but with a higher density of devices. Per
 
 ## Final remarks:
 •	Some implementation details were omitted because they were left the same as the professors' initial code.
+
 •	As suggested by the professors we have created two separate launch files to avoid issues when starting the program. One contains the spawn of everything except the SDFs and the other just the SDFs.
+
 •	Other details about implementation are commented inside the code shared.
+
 •	Simulations’ performances showed above are a little bit influenced by the initial stabilization phase of the balloons. In fact, at the beginning they move towards their target positions and could lose some data sent from far sensors. We left this data loss in the statistics since it’s plausible in a realistic scenario a moment of adjustment.
 
